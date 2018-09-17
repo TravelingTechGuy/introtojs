@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+  <title>Intro to JS</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" media="screen" href="deck/core/deck.core.css">
+  <link rel="stylesheet" media="screen" href="deck/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="deck/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="deck/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="deck/extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="deck/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" media="screen" href="deck/themes/style/web-2.0.css">
+  <link rel="stylesheet" media="screen" href="deck/themes/transition/horizontal-slide.css">
+  <link rel="stylesheet" media="print" href="deck/core/print.css">
+  <script src="deck/modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+    <section class="slide" id="cover">
+      <h1>Introduction to JavaScript</h1>
+      <h3>Clark College<br>Vancouver, Washington<br>Fall Semester 2018</h3>
+      <h4>Week 1</h4> 
+    </section>
+
+    <section class="slide" id="about-me">
+      <h2>Guy Vider</h2>
+      <h3>Site: <a href="https://www.TravelingTechGuy.com">TravelingTechGuy.com</a></h3>
+      <h3>Github: <a href="https://github.com/TravelingTechGuy">github.com/TravelingTechGuy</a></h3>
+      <h3>LinkedIn: <a href="https://www.linkedin.com/in/gvider">linkedin.com/in/gvider</a></h3>
+      <h3>Twitter: <a href="https://twitter.com/@TravelTechGuy">@TravelTechGuy</a></h3>
+    </section>
+
+    <section class="slide" id="contents">
+      <h3>Today we'll cover:</h3>
+      <ol>
+        <li class="slide">What is JavaScript?</li>
+        <li class="slide">What can I use it for?</li>
+        <li class="slide">What tools do I need to start programming?</li>
+        <li class="slide">What is a REPL and how do I use it?</li>
+        <li class="slide">JavaScript expressions and operators</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="whats-jsvascript">
+      <h3>What is JavaScript?</h3>
+      <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction">
+        <p>
+          JavaScript is a cross-platform, object-oriented scripting language used to make webpages interactive (e.x. having complex animations, clickable buttons, popup menus, etc.).
+          There are also more advanced server side versions of javascript such as Node.Js which allow you to add more functionality to a website...
+        </p>
+        <cite><p>Mozilla</p></cite>
+      </blockquote>
+      <h4>Simply put, JavaScript makes your static web pages become active.</h4>
+    </section>
+
+    <section class="slide" id="prerequisits">
+      <h3>To write JavaScript programs, you'll need:</h3>
+      <ol>
+        <li>A browser of your choosing (Chrome/FireFox/Edge/Safari)</li>
+        <li>A text editor - any will do, but ones that support syntax highlighting are highly recommended
+          <ul>
+            <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+            <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          </ul>
+        </li>
+        <li>Some knowledge of HTML and CSS is recommended</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="where-js">
+      <h3>Examples of JavaScript usage:</h3>
+      <ul>
+        <li class="slide">
+          <h4>Web forms processing</h4>
+          <ul>
+            <li>Text fields processing</li>
+            <li>Form controls</li>
+            <li>Button actions</li>
+          </ul>
+        </li>
+        <li class="slide">
+          <h4>Web pages animations and transitions</h4>
+          <ul>
+            <li>Menus and navigations</li>
+            <li>Drag and drop</li>
+            <li>Animations and transitions (i.e. this presentation)</li>
+          </ul>
+        </li>
+        <li class="slide">
+          <h4>Phone apps</h4>
+          <p>
+            Many phone apps are written in JavaScript to allow coding for both Android and iOS
+          </p>
+        </li>
+        <li class="slide">
+          <h4>Server side</h4>
+          <p>
+            Many web sites run JavaScript on the server, using the same language in the front and back ends
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide" id="REPL">
+      <p>
+        JavaScript is an <u>interpeted</u> programming language, meaning the computer takes one instruction at a time,
+        interprets it into machine-language, and executes it.
+      </p>
+      <p>
+        JavaScript provides a <u>REPL</u> (Read-Eval-Print loop) that allows us to freely
+        type JavaScript instructions and have them executed.
+      </p>
+      <p class="slide">
+        You have a REPL like that in your browser. Let's access it:
+        <ul class="slide">
+          <li>
+            In Chrome, go to Menu > More Tools > Developer Tools<br>
+            or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)
+          </li>
+          <li>
+            In FireFox go to menu > Web Develop >Toggle Tools<br>
+            or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)
+          </li>
+          <li>In Microsoft Edge select Developer Tools from the menu, or click <u>F12</u></li>
+          <li>
+              In Safari Choose Safari > Preferences, and click Advanced<br>
+              At the bottom of the pane, select the “Show Develop menu in menu bar” checkbox<br>
+              Choose Develop > Show Web Inspector
+          </li>
+        </ul>
+      </p>
+      <!--  -->
+    </section>
+
+    <section class="slide" id="developer-tools">
+      <img src="images/1/dev-tools.png" alt="Developer Tools in FireFox" />
+      <p>
+        In all browsers, you'll be able to switch to a tab named <u>Console</u><br>
+        In Chrome, you may need to switch to the Sources tab, before Console becomes available.
+      </p>
+    </section>
+
+    <section class="slide" id="repl-2">
+      <p>Things you can type into the REPL:</p>
+      <ul>
+        <li class="slide">Numbers</li>
+        <li class="slide">Numeric operations (try typing 1+1 or 2*5)</li>
+        <li class="slide">Strings - a set of characters surrounded by quotes or double quotes</li>
+        <li class="slide">Console functions - try typing <code>console.log('hello')</code></li>
+        <li class="slide">Functions - try typing <code>Math.sqrt(4)</code></li>
+        <li class="slide">Assignments - try typing <code>a = 'my name'</code></li>
+      </ul>
+    </section>
+
+    <section class="slide" id="html">
+      <p>The console is nice, but if we want to be able to use JavaScript in an HTML page, we need to be able to embed it.</p>
+      <p>Here's a simple HTML page that says Hello:</p>
+      <code>
+        &lt;html&gt;<br>
+        &lt;head&gt;<br>
+        &nbsp;&nbsp;&lt;title&gt;I'm a page&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        &nbsp;&nbsp;Hello<br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;<br>
+      </code><br>
+      <p>
+        Type it into your text editor, save it as test.html, then open it in your browser
+      </p>
+      <p>
+        Now let's add some JavaScript. On the page, before the line <code>&lt;body&gt;</code><br>
+        Type the following:
+        <code>
+          &lt;script&gt;document.write(' world!');&lt;/script&gt;
+        </code><br>
+        Save the file, refresh the browser. What do you see?
+      </p>
+    </section>
+
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+  </div>
+
+  <script src="deck/jquery.min.js"></script>
+  <script src="deck/core/deck.core.js"></script>
+  <script src="deck/extensions/menu/deck.menu.js"></script>
+  <script src="deck/extensions/goto/deck.goto.js"></script>
+  <script src="deck/extensions/status/deck.status.js"></script>
+  <script src="deck/extensions/navigation/deck.navigation.js"></script>
+  <script src="deck/extensions/scale/deck.scale.js"></script>
+  <script>
+    $(function() {
+      $.deck('.slide');
+    });
+  </script>
+</body>
+</html>
