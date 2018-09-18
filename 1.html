@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=1024, user-scalable=no">
   <title>Intro to JS</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.ico">
   <link rel="stylesheet" media="screen" href="deck/core/deck.core.css">
   <link rel="stylesheet" media="screen" href="deck/extensions/goto/deck.goto.css">
   <link rel="stylesheet" media="screen" href="deck/extensions/menu/deck.menu.css">
@@ -120,28 +120,34 @@
         <li>Some knowledge of HTML and CSS is recommended</li>
       </ol>
     </section>
-    
+
     <section class="slide" id="REPL">
+      <h3>The REPL</h3>
       <p>
-        JavaScript is an <u>interpeted</u> programming language, meaning the computer takes one instruction at a time,
-        interprets it into machine-language, and executes it.
+        JavaScript is an <u>interpreted</u> programming language, meaning the JavaScript engine in your browser takes one instruction at a time,
+        interprets it into bytecodes, and executes it. That makes the languge dynamic and fast, and allows for all kinds of optimizations.
       </p>
       <p>
-        JavaScript provides a <u>REPL</u> (Read-Eval-Print loop) that allows us to freely
-        type JavaScript instructions and have them executed.
+        JavaScript provides a <u>REPL</u> (Read-Eval-Print Loop) that allows us to freely
+        type JavaScript instructions and have them executed right away.
       </p>
       <p class="slide">
-        You have a REPL like that in your browser. Let's access it:
+        You have a REPL like that in your browser, in your Developer Tools. Let's access it:
         <ul class="slide">
           <li>
             In Chrome, go to Menu > More Tools > Developer Tools<br>
-            or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)
+            or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)<br>
+            or right-click the mouse anywhere on the page, and select <u>Inspect</u>
           </li>
           <li>
             In FireFox go to menu > Web Develop >Toggle Tools<br>
             or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)
+            or right-click the mouse anywhere on the page, and select <u>Inspect Element</u>
           </li>
-          <li>In Microsoft Edge select Developer Tools from the menu, or click <u>F12</u></li>
+          <li>
+            In Microsoft Edge select Developer Tools from the menu, or click <u>F12</u><br>
+            or right-click the mouse anywhere on the page, and select <u>Inspect</u>
+          </li>
           <li>
               In Safari Choose Safari > Preferences, and click Advanced<br>
               At the bottom of the pane, select the “Show Develop menu in menu bar” checkbox<br>
@@ -149,7 +155,6 @@
           </li>
         </ul>
       </p>
-      <!--  -->
     </section>
 
     <section class="slide" id="developer-tools">
