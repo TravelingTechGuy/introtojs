@@ -36,11 +36,25 @@
     <section class="slide" id="contents">
       <h3>Today we'll cover:</h3>
       <ol>
+        <li class="slide">What tools do I need to start programming?</li>
         <li class="slide">What is JavaScript?</li>
         <li class="slide">What can I use it for?</li>
-        <li class="slide">What tools do I need to start programming?</li>
         <li class="slide">What is a REPL and how do I use it?</li>
         <li class="slide">JavaScript expressions and operators</li>
+      </ol>
+    </section>
+
+    <section class="slide" id="tools">
+      <h3>To write JavaScript code, we'll need:</h3>
+      <ol>
+          <li>A text editor - any will do, but ones that support syntax highlighting are highly recommended
+            <ul>
+              <li><a target="_blank" href="https://code.visualstudio.com/download">Visual Studio Code</a> - our editor for this course</li>
+              <li><a target="_blank" href="https://www.sublimetext.com/">Sublime Text</a></li>
+            </ul>
+        </li>
+        <li>A browser of your choosing (Chrome/FireFox/Edge/Safari) - we'll use Chrome in this course</li>
+        <li>Some knowledge of HTML and CSS is recommended</li>
       </ol>
     </section>
 
@@ -61,24 +75,13 @@
       </ul>>
     </section>
 
-    <section class="slide" id="features">
-      <h3>JavaScript main features</h3>
-      <ul>
-        <li class="slide">High level (abstracts from the details of the computer or environment)</li>
-        <li class="slide">Interperted (rather then compiled)</li>
-        <li class="slide">Object oriented (more about that in week 3)</li>
-        <li class="slide">Multi-platform (can run on any machine, OS, or device - both on the client and server side)</li>
-        <li class="slide">Most features of the language work in every browser for exceptions check <a target="_blank" href="https://www.caniuse.com">CanIUse</a></li>
-      </ul>
-    </section>
-
     <section class="slide" id="where-js">
       <h3>Examples of JavaScript usage:</h3>
       <ul>
         <li class="slide">
           <h4>Web forms processing</h4>
           <ul>
-            <li>Text fields processing</li>
+            <li>Input validation</li>
             <li>Form controls</li>
             <li>Button actions</li>
           </ul>
@@ -106,19 +109,42 @@
         <li class="slide"><h4>This slide deck is actually a single HTML page animated by JavaScript!</h4></li>
       </ul>
     </section>
+    
+    <section class="slide" id="features">
+      <h3>JavaScript main features</h3>
+      <ul>
+        <li class="slide">High level (abstracts from the details of the computer or environment)</li>
+        <li class="slide">Interperted (rather then compiled)</li>
+        <li class="slide">Object oriented (more about that in week 3)</li>
+        <li class="slide">Multi-platform (can run on any machine, OS, or device - both on the client and server side)</li>
+        <li class="slide">Most features of the language work in every browser for exceptions check <a target="_blank" href="https://www.caniuse.com">CanIUse</a></li>
+      </ul>
+    </section>
 
-    <section class="slide" id="prerequisits">
-      <h3>To devlop in JavaScript programs, you'll need:</h3>
-      <ol>
-          <li>A text editor - any will do, but ones that support syntax highlighting are highly recommended
-            <ul>
-              <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> - our editor for this course</li>
-              <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
-            </ul>
-        </li>
-        <li>A browser of your choosing (Chrome/FireFox/Edge/Safari) - we'll use Chrome in this course</li>
-        <li>Some knowledge of HTML and CSS is recommended</li>
-      </ol>
+    <section class="slide" id="interpreter">
+      <h3>JavaScript Interpreter</h3>
+      <div class="slide">
+        Most applications we use (such as this browser) are <u>compiled</u>, 
+        meaning a special program called <u>compiler</u> processed the source code into machine language.<br>
+        While compiled applications are (genrally speaking) faster, they are tied to a specific platform (OS, or computer), 
+        are usually large files, and are hard to debug once compiled.<br>
+        <br>
+        An <u>interpreter</u> executes each line of code as it reads it. This allows us to use the same source code for many platforms (in our case, browsers), 
+        the source code is relatively small (and can be further minimized and compressed), 
+        and is much easier to debug in run-time.
+        <br>
+        Your browser has a JavaScript engine, that acts as an interpreter.<br>
+      </div>
+      <br>
+      <div class="slide">
+        <h4>Common JavaScript engines:</h4>
+        <ul>
+          <li>V8 - Chrome/Chromium-based browsers/Node JS/Android</li>
+          <li>SpiderMonkey - Firefox</li>
+          <li>Chakra - Microsoft Edge</li>
+          <li>JavaScriptCore - Safari/WebKit based browsers/iOS</li>
+        </ul>
+      </div>
     </section>
 
     <section class="slide" id="REPL">
@@ -140,7 +166,7 @@
             or right-click the mouse anywhere on the page, and select <u>Inspect</u>
           </li>
           <li>
-            In FireFox go to menu > Web Develop >Toggle Tools<br>
+            In Firefox go to menu > Web Develop >Toggle Tools<br>
             or click <u>CTRL+SHIFT+I</u> (<u>CMD+SHIFT+I</u> on Mac)
             or right-click the mouse anywhere on the page, and select <u>Inspect Element</u>
           </li>
@@ -158,7 +184,7 @@
     </section>
 
     <section class="slide" id="developer-tools">
-      <img src="images/1/dev-tools.png" alt="Developer Tools in FireFox" />
+      <img src="images/1/dev-tools.png" alt="Developer Tools in Firefox" />
       <p>
         In all browsers, you'll be able to switch to a tab named <u>Console</u><br>
         In Chrome, you may need to switch to the Sources tab, before Console becomes available.
@@ -175,32 +201,6 @@
         <li class="slide">Functions - try typing <code>Math.sqrt(4)</code></li>
         <li class="slide">Assignments - try typing <code>a = 'my name'</code></li>
       </ul>
-    </section>
-
-    <section class="slide" id="html">
-      <p>The console is nice, but if we want to be able to use JavaScript in an HTML page, we need to be able to embed it.</p>
-      <p>Here's a simple HTML page that says Hello:</p>
-      <code>
-        &lt;html&gt;<br>
-        &lt;head&gt;<br>
-        &nbsp;&nbsp;&lt;title&gt;I'm a page&lt;/title&gt;<br>
-        &lt;/head&gt;<br>
-        &lt;body&gt;<br>
-        &nbsp;&nbsp;Hello<br>
-        &lt;/body&gt;<br>
-        &lt;/html&gt;<br>
-      </code><br>
-      <p>
-        Type it into your text editor, save it as test.html, then open it in your browser
-      </p>
-      <p>
-        Now let's add some JavaScript. On the page, before the line <code>&lt;body&gt;</code><br>
-        Type the following:
-        <code>
-          &lt;script&gt;document.write(' world!');&lt;/script&gt;
-        </code><br>
-        Save the file, refresh the browser. What do you see?
-      </p>
     </section>
 
     <div aria-role="navigation">
