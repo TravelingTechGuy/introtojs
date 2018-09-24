@@ -192,7 +192,7 @@
     </section>
 
     <section class="slide" id="repl-2">
-      <p>Things you can type into the REPL:</p>
+      <p>Things you can type into the REPL (hit <code>Enter</code> to start evaluation):</p>
       <ul>
         <li class="slide">Numbers</li>
         <li class="slide">Numeric operations (try typing 1+1 or 2*5)</li>
@@ -201,6 +201,151 @@
         <li class="slide">Functions - try typing <code>Math.sqrt(4)</code></li>
         <li class="slide">Assignments - try typing <code>a = 'my name'</code></li>
       </ul>
+    </section>
+
+    <section class="slide" id="expressions">
+      <h3>JavaScript Expressions</h3>
+      <h4>Expressions are units of code that can be evaluated to a value.</h4>
+      <ul>
+        <li class="slide">Numbers - 2, -7, 4.1</li>
+        <li class="slide">Arithmatic expressions - 1 + 1, 75 / 3, 2 + 4 + 5</li>
+        <li class="slide">Logical expressions - 7 > 2, 8 < 10 && 1 < 2</li>
+        <li class="slide">String expressions - 'something' or "something"</li>
+        <li class="slide">We'll encounter more expression types later on when we discuss array, objects and functions</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="arithmatic">
+      <h3>Numbers</h3>
+      <h4>Types of numbers that can be used in JavaScript:</h4>
+      <ul>
+        <li class="slide">Integers - whole numbers between -2<sup>31</sup> to 2<sup>31</sup></li>
+        <li class="slide">Floating point - fractions, numbers containing a '.'</li>
+        <li class="slide">Numbers in different bases:
+          <ul>
+            <li>Binary - 0b1110 (0b or 0B and the digits 0,1)</li>
+            <li>Octal - 0o123 (0o or 0O and the digits 0-7)</li>
+            <li>Hexadecimal - 0x1A3 (0x or 0X, the digits 0-9 and the letters A-F)</li>
+          </ul>
+        </li>
+        <li class="slide">NaN - not a number - the result of trying to evaluate something that is not a legal number (like <code>Math.sqrt(-1)</code>)</li>
+      </ul>
+      
+    </section>
+
+    <section class="slide" id="arithmatic">
+      <h3>Arithmatic Expressions</h3>
+      <div>
+        Numbers and aritmetic operators between them. that evaluate to numbers. Available operators:
+        <ul>
+          <li>+ - addition</li>
+          <li>- - subtraction</li>
+          <li>* - multiplication</li>
+          <li>/ - division</li>
+          <li>% - modulus (division remainder)</li>
+          <li>** - power</li>
+        </ul>
+      </div>
+      <div class="slide">
+        Remember your operators precedence!
+        <ul>
+          <li>All operators (other than **) are evaluated left-to-right</li>
+          <li>*, /, ** and % precede + and -</li>
+          <li>You can control the precedence by using parentheses</li>
+        </ul><br>
+      </div>
+    </section>
+    
+    <section class="slide" id="arithmatic-exercise">
+      <h4>Exercise: evaluate the following expressions:</h4>
+      <ul>
+        <li class="slide">7 + 3 * 7 -5</li>
+        <li class="slide">2 ** 3 - 6 / 2</li>
+        <li class="slide">(8+5) / (3 + 4)</li>
+        <li class="slide">7 % 2 + 3</li>
+        <li class="slide">7 / (2 + 1)</li>
+        <li class="slide">7 / 2 + 1</li>
+        <li class="slide">8 + 3 * 3 -3</li>
+        <li class="slide">100 / (8 + 2) / 10</li>
+        <li class="slide">2 ** 2 * 3 vs 2 ** (2 * 3)</li>
+        <li class="slide">2 ** 2 ** 3 vs. (2 ** 2) ** 3</li>
+        <li class="slide">2 / 0 and -2 / 0</li>
+        <li class="slide">Math.sqrt(2 - 1)</li>
+        <li class="slide">-2 ** 2 is illegal - try (-2) ** 2 instead</li>
+      </ul>
+    </section>
+    
+    <section class="slide" id="logical">
+      <h3>Logical Expressions</h3>
+      <div>
+        Logical expressions contain statments that evaluate to <code>true</code> or <code>false</code>.<br>
+        Another feature of JavaScript, owing to it's C roots - <code>false</code> gets evaluated to zero and <code>true</code> to non-zero (usually 1)<br>
+        and vice versa.
+        <ul>
+          <li>&gt; - greater than</li>
+          <li>&lt; - less than</li>
+          <li>==, === - equal to, strict equal to</li>
+          <li>!=, !== - not equal to, strict not equal to</li>
+          <li>! - logical NOT</li>
+          <li>&& - logical AND</li>
+          <li>|| - logical OR</li>
+        </ul>
+      </div>
+      <div class="slide">
+        Remember your operators precedence!<br>
+        <ul>
+          <li>Operators are evaluated left to right</li>
+          <li>!, || and && precede equality tests</li>
+          <li>arithmatic expressions precede both!</li>
+          <li>You can control the precedence by using parentheses</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide" id="logical-exercise">
+      <h4>Exercise: evaluate the following expressions:</h4>
+      <ul>
+        <li class="slide">7 < 3</li>
+        <li class="slide">2 == 3 || 6 > 2</li>
+        <li class="slide">(8 > 5) && (3 < 4)</li>
+        <li class="slide">(8 > 5) && (3 > 4)</li></4>
+        <li class="slide">7 > 2 > 3</li>
+        <li class="slide">1 + 9 > 10</li>
+        <li class="slide">!(7 > 8)</li>
+        <li class="slide">4 > 3 && !(4 > 3)</li>
+        <li class="slide">4 > 3 && !(4 < 3)</li>
+        <li class="slide">2 + 2 > 3 || !(5 - 1 > 3)</li>
+        <li class="slide">What's the difference between 5 - 1 > 3 and 5 - (1 > 3)?</li> 
+        <li class="slide">true || false</li>
+        <li class="slide">true && false</li>
+        <li class="slide">true && !false</li>
+        <li class="slide">!true || false</li>
+      </ul>
+    </section>
+
+    <section class="slide id="strings">
+      <h3>Strings</h3>
+      <div>
+        In JavaScript, strings are a series of characters enclosed in quotes (') or double-quotes (")<br>
+        Characters can be any Unicode character, including spaces, tabs etc:<br>
+        <div>"中文 español Deutsch English देवनागरी العربية português বাংলা русский 日本語 ਪੰਜਾਬੀ 한국어 தமிழ் עברית"</div>
+        <br>
+        <div class="slide">
+          <h4>Things we can do with strings:</h4>
+          <ul>
+            <li class="slide">We can compare them: 'Guy' !== 'guy'</li>
+            <li class="slide">We can concatenate them using the '+' sign: 'hello + ' world'</li>
+            <li class="slide">To include special characters in a string, you need to use escape characters (examples: \n - newline, \t - tab, \" - quotes</li>
+            <li class="slide">Strings are 0-based (the first letter is in place 0, the second 1 etc.), so 'hello'[1] === 'e'</li>
+            <li class="slide">You can extract numbers from strings using the functions <code>parseInt</code> and <code>parseFloat</code></li>
+          </ul>
+        </div>
+        <div class="slide">
+          Even though both quotes and double-quotes are legal in JavaScript, we'll use quotes (') for our strings,<br>
+          to prevent confusion with HTML attributes, that must use "":<br>
+          <code>'&lt;div class="myClass"&gt;' + 'my content' + '&lt;/div&gt;'
+        </div>
+      </div>
     </section>
 
     <div aria-role="navigation">
